@@ -28,9 +28,9 @@
           <c:forEach var="post" items="${board}">
             <tr>
               <td>${post.postNo}</td>
-              <td><a href="post.do?postNo=${post.postNo}">${post.title}</a></td>
-              <td>${post.writer}</td>
-              <td>${post.regDate}</td>
+              <td><a href="post?postNo=${post.postNo}">${post.postTitle}</a></td>
+              <td>${post.userId}</td>
+              <td>${post.postRegDate}</td>
             </tr>
           </c:forEach>
         </tbody>

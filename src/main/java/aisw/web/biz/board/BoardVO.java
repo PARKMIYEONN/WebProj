@@ -2,89 +2,80 @@ package aisw.web.biz.board;
 
 public class BoardVO {
 
+	@Override
+	public String toString() {
+		return "BoardVO [postNo=" + postNo + ", userId=" + userId + ", content=" + content + ", postRegDate="
+				+ postRegDate + ", postTitle=" + postTitle + ", postPermission=" + postPermission + ", postHit="
+				+ postHit + "]";
+	}
 	private int postNo;
-	private String writer;
+	private String userId;
 	private String content;
-	private String regDate;
-	private String title;
+	private String postRegDate;
+	private String postTitle;
 	private int postPermission;
-	private int hit;
+	private int postHit;
 	
 	public int getPostNo() {
 		return postNo;
 	}
-	
 	public void setPostNo(int postNo) {
 		this.postNo = postNo;
 	}
-	
-	public String getWriter() {
-		return writer;
+	public String getUserId() {
+		return userId;
 	}
-	
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-	
 	public String getContent() {
 		return content;
 	}
-	
 	public void setContent(String content) {
 		this.content = content;
 	}
-	
-	public String getRegDate() {
-		return regDate;
+	public String getPostRegDate() {
+		return postRegDate;
 	}
-	
-	public void setRegDate(String regDate) {
-		this.regDate = regDate;
+	public void setPostRegDate(String postRegDate) {
+		this.postRegDate = postRegDate;
 	}
-	
-	public String getTitle() {
-		return title;
+	public String getPostTitle() {
+		return postTitle;
 	}
-	
-	public void setTitle(String title) {
-		this.title = title;
+	public void setPostTitle(String postTitle) {
+		this.postTitle = postTitle;
 	}
-	
 	public int getPostPermission() {
 		return postPermission;
 	}
-	
 	public void setPostPermission(int postPermission) {
 		this.postPermission = postPermission;
 	}
-	
-	public int getHit() {
-		return hit;
+	public int getPostHit() {
+		return postHit;
 	}
-	
-	public void setHit(int hit) {
-		this.hit = hit;
+	public void setPostHit(int postHit) {
+		this.postHit = postHit;
 	}
-
-	public BoardVO(int postNo, String writer, String content, String regDate, String title, int postPermission,
-			int hit) {
+	public BoardVO(int postNo, String userId, String content, String postRegDate, String postTitle, int postPermission,
+			int postHit) {
 		super();
 		this.postNo = postNo;
-		this.writer = writer;
+		this.userId = userId;
 		this.content = content;
-		this.regDate = regDate;
-		this.title = title;
+		this.postRegDate = postRegDate;
+		this.postTitle = postTitle;
 		this.postPermission = postPermission;
-		this.hit = hit;
+		this.postHit = postHit;
 	}
-
 	public BoardVO() {
 		super();
 	}
-
-	@Override
-	public String toString() {
-		return "BoardVO [postNo=" + postNo + ", writer=" + writer + ", content=" + content + ", regDate=" + regDate
-				+ ", title=" + title + ", postPermission=" + postPermission + ", hit=" + hit + "]";
-	}
+	
+	
+	
+	
+	
+	
 }
