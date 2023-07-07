@@ -3,9 +3,13 @@ package aisw.web.board.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import aisw.web.biz.board.BoardDAO;
 import aisw.web.biz.board.BoardVO;
@@ -26,6 +30,14 @@ public class BoardListController{
 		
 		return "index";
 	}
+	
+	@GetMapping("/newsapi")
+	public List<BoardVO> newsList()
+	{
+		List<BoardVO> boardList = dao.getBoardList();		
+		return boardList;
+	}
+	
 	
 	@RequestMapping("/post")
 	public String post(Model model, Integer postNo)
@@ -50,6 +62,16 @@ public class BoardListController{
 		
 		return "redirect:/index";
 	}
+	
+	@RequestMapping("/deletepost")
+	public String deletepost(Model model, Integer postNo)
+	{
+		dao.deleteNews(postNo);
+		
+		return "redirect:/index";
+	}
+	
+	
 	
 //	@Override
 //	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
