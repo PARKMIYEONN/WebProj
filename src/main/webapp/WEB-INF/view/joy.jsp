@@ -28,12 +28,12 @@
         <tbody>
           <c:forEach var="post" items="${board}">
             <tr>
-              <td>${post.p_no}</td>
-              <td><a href="post?p_no=${post.p_no}">${post.p_title}</a></td>
-              <td>${post.p_writer}</td>
-              <td>${post.p_reg_Date}</td>
+              <td>${post.post_cd}</td>
+              <td><a href="post?post_cd=${post.post_cd}">${post.post_title}</a></td>
+              <td>${post.u_id}</td>
+              <td>${post.post_date}</td>
               <td><form action="deletepost" method="post">
-               <input type="hidden" name="postNo" value="${post.p_no}">
+               <input type="hidden" name="post_cd" value="${post.post_cd}">
               <button type="submit" class="btn btn-outline-primary me-2">삭제</button>
               </form>
               </td>
@@ -41,7 +41,7 @@
           </c:forEach>
         </tbody>
       </table>
-      <form action="posting" method="post" class="text-center">
+      <form action="" method="post" class="text-center">
       
         <button type="submit" class="btn btn-primary">글쓰기</button>
       </form>

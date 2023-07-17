@@ -28,12 +28,12 @@
         <tbody>
           <c:forEach var="post" items="${board}">
             <tr>
-              <td>${post.p_no}</td>
-              <td><a href="post?p_no=${post.p_no}">${post.p_title}</a></td>
-              <td>${post.p_writer}</td>
-              <td>${post.p_reg_Date}</td>
+              <td>${post.nc_no}</td>
+              <td><a href="post?nc_no=${post.nc_no}">${post.nc_title}</a></td>
+              <td>${post.nc_id}</td>
+              <td>${post.nc_date}</td>
               <td><form action="deletepost" method="post">
-               <input type="hidden" name="postNo" value="${post.p_no}">
+               <input type="hidden" name="postNo" value="${post.nc_no}">
               <button type="submit" class="btn btn-outline-primary me-2">삭제</button>
               </form>
               </td>

@@ -31,12 +31,6 @@ public class BoardListController{
 		return "index";
 	}
 	
-	@GetMapping("/newsapi")
-	public List<BoardVO> newsList()
-	{
-		List<BoardVO> boardList = dao.getBoardList();		
-		return boardList;
-	}
 	
 	
 	@RequestMapping("/post")
